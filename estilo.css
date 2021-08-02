@@ -6,8 +6,14 @@
     border: solid 1px #EECCBB;
 }
 
+.preto{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
 .verde{
     background-color: #00FF00;
+    color: #000000;
 }
 
 .vermelho{

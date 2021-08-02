@@ -23,3 +23,18 @@ function azul(){
     document.querySelector('#nome').classList.remove('verde');
     document.querySelector('#nome').classList.add('azul');
 }
+
+function trocar(){
+
+    if(document.querySelector('#btnTrocar').classList.contains('preto')){
+
+        document.querySelector('#btnTrocar').classList.remove('preto')
+        document.querySelector('#btnTrocar').classList.add('verde');
+    }
+    else{
+
+        document.querySelector('#btnTrocar').classList.remove('verde')
+        document.querySelector('#btnTrocar').classList.add('preto');
+    }
+
+}
