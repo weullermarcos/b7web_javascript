@@ -36,5 +36,10 @@ function trocar(){
         document.querySelector('#btnTrocar').classList.remove('verde')
         document.querySelector('#btnTrocar').classList.add('preto');
     }
+}
+
+function trocaAimal(animal){
+
+    document.querySelector('.animal').setAttribute('src', 'img/'+animal+'.jpg');
 
 }
