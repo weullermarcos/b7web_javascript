@@ -1,9 +1,10 @@
 
-//alert('ola mundo'); //dispara um alerta na tela
-
 document.getElementById('titulo').innerHTML = 'Tudo certo'; //altera um elemento da tela
 
 document.write('escrevendo...'); //escreve na tela
+
+//adicionando um evento para monitorar o scroll a tela
+window.addEventListener('scroll', verificarScroll);
 
 function verde(){
 
@@ -41,5 +42,27 @@ function trocar(){
 function trocaAimal(animal){
 
     document.querySelector('.animal').setAttribute('src', 'img/'+animal+'.jpg');
+}
 
+function subirTela(){
+
+    //função pra fazer o scroll na tela
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
+function verificarScroll(){
+
+    if(window.scrollY === 0){
+
+        //ocultando o botão de scroll se estiver no topo
+        document.querySelector('.scrollButton').style.display = 'none';
+    }
+    else{
+
+        document.querySelector('.scrollButton').style.display = 'block';
+    }
 }
