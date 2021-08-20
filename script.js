@@ -67,6 +67,7 @@ function verificarScroll(){
     }
 }
 
+/*
 let nome = 'Divonzir Quennehen da Silva    ';
 console.log(nome.split(' '));
 
@@ -80,6 +81,25 @@ console.log(n.toString()); //cast para string
 console.log(n1.toFixed(2));
 console.log(parseInt(n2)); //cast para int
 console.log(parseFloat(n3)); //cast para float
+*/
+
+let lista = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+
+lista.pop();
+lista.shift();
+lista.push('item x');
+let resposta = lista;
+
+console.log(lista.toString());
+console.log(lista.join('**'));
+console.log(lista.indexOf('item 3'));
+console.log(lista.indexOf('item 3'));
+console.log(resposta);
+
+
+
+
+
 
 
 
