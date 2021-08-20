@@ -66,3 +66,20 @@ function verificarScroll(){
         document.querySelector('.scrollButton').style.display = 'block';
     }
 }
+
+let nome = 'Divonzir Quennehen da Silva    ';
+console.log(nome.split(' '));
+
+let n = 10;
+let n1 = 10.646546546546;
+let n2 = '25';
+let n3 = '25.123';
+
+console.log(n); //imprimindo um inteiro - cor diferente no console
+console.log(n.toString()); //cast para string
+console.log(n1.toFixed(2));
+console.log(parseInt(n2)); //cast para int
+console.log(parseFloat(n3)); //cast para float
+
+
+
