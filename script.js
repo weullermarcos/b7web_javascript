@@ -101,6 +101,32 @@ console.log(lista.indexOf('item 3'));
 console.log(resposta);
 
 
+let listaNumeros = [45, 4, 9, 16, 25];
+let resultadoNum = listaNumeros.map(function (item){
+    return item * 2;
+});
+console.log(resultadoNum);
+
+let outraLista = listaNumeros.filter(function (item){
+
+    return (item < 30);
+});
+console.log(outraLista);
+
+let maisUmaLista = listaNumeros.every(function (item){
+
+    return (item > 1);
+});
+console.log(maisUmaLista);
+
+let maisUmaLista2 = listaNumeros.some(function (item){
+
+    return (item > 20);
+});
+console.log(maisUmaLista2);
+
+
+
 
 
 
