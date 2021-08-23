@@ -125,7 +125,11 @@ let maisUmaLista2 = listaNumeros.some(function (item){
 });
 console.log(maisUmaLista2);
 
+let listaFindada = lista2.findIndex(function (item){
 
+    return (item == 'item 230');
+});
+console.log(listaFindada);
 
 
 
