@@ -84,11 +84,15 @@ console.log(parseFloat(n3)); //cast para float
 */
 
 let lista = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+let lista2 = ['item 21', 'item 22', 'item 23', 'item 24', 'item 25'];
 
 lista.pop();
 lista.shift();
 lista.push('item x');
-let resposta = lista;
+lista.slice(1,1);
+let resposta = lista.concat(lista2); //concatena 2 arrays
+resposta.sort(); //ordena um array em ordemalfabética
+resposta.reverse(); //reverte a ordem de ordenação de um array
 
 console.log(lista.toString());
 console.log(lista.join('**'));
