@@ -132,6 +132,19 @@ let listaFindada = lista2.findIndex(function (item){
 console.log(listaFindada);
 
 
+let data = new Date();
+
+console.log(data.getDate());
+console.log(data.getHours());
+console.log(data.getTime());
+
+
+
+
+
+
+
+
 
 
 
