@@ -133,14 +133,20 @@ console.log(listaFindada);
 
 
 let data = new Date();
+data.setFullYear(2022); //altera o ano
+data.setDate(5); //altera o dia
+data.setDate(data.getDate() + 5); //pega a data e soma mais 5 dias
 
-console.log(data.getDate());
-console.log(data.getHours());
-console.log(data.getTime());
+console.log(data);
 
-
-
-
+console.log(Math.PI);//recupera o valor e PI
+console.log(Math.round(3.56));//arredonda valores para cima ou para baixo
+console.log(Math.floor(3.56));//arredonda para baixo
+console.log(Math.ceil(3.56));//arredonda valores para cima
+console.log(Math.min(3, 5, 6, 1, -12, -10, 1, 2, 3,4));//retorna o menor valor em uma série de números
+console.log(Math.max(3, 5, 6, 1, -12, -10, 1, 2, 3,4));//retorna o maior valor em uma série de números
+console.log(Math.random());//retorna um número aleatório entre 0 e 1
+console.log(Math.floor(Math.random() * 100));//retorna um número aleatório entre 0 e 100
 
 
 
