@@ -189,6 +189,30 @@ let frase1 = `Meu nome é ${nome}, eu tenho ${idade} anos e ano que vem eu farei
 console.log(frase1);
 
 
+let pessoa = {
+    nome: 'Adão',
+    sobrenome: 'Primeiro',
+    minhaIdade: '120',
+    social: {
+        facebook: 'adaozim',
+        instagram: '@adaozim'
+    },
+    nomeCompleto: function (){
+        return `${this.meuNome} ${this.sobrenome}`;
+    }
+};
+
+//desconstruindo um objeto
+let {nome:meuNome, sobrenome, minhaIdade = 10} = pessoa;
+console.log(meuNome, sobrenome, minhaIdade);
+
+
+let euMeAmarray = ['Algulstus Júunnyor', 'Algulstus', 'Júunnyor', '@gutym'];
+let [, arrNome, arrSobreNome, arrInsta, arrIdade=101] = euMeAmarray; //a desconstrução do array acontece na ordem que ele foi criado
+console.log(arrNome, arrSobreNome, arrInsta, arrIdade);
+
+
+
 
 
 
