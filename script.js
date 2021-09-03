@@ -149,7 +149,44 @@ console.log(Math.random());//retorna um número aleatório entre 0 e 1
 console.log(Math.floor(Math.random() * 100));//retorna um número aleatório entre 0 e 100
 
 
+let timer;
 
+function comecar(){
+
+    //criando um timer que executa a função showTime a cada mil milisegundos (1 segundo)
+    timer = setInterval(showTime, 1000);
+}
+
+function parar(){
+
+    clearInterval(timer); //encerrando timer
+}
+
+function rodar(){
+
+    setTimeout(function (){
+
+        alert('sou um pop-up');
+    }, 2000);
+}
+
+function showTime(){
+
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+
+    let txt = h + ':' + m + ':' + s;
+
+    document.querySelector('.timer').innerHTML = txt;
+}
+
+
+let nome = 'Divnionzur';
+let idade = 90;
+let frase1 = `Meu nome é ${nome}, eu tenho ${idade} anos e ano que vem eu farei ${idade + 1} anos`;
+console.log(frase1);
 
 
 
