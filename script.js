@@ -206,10 +206,25 @@ let pessoa = {
 let {nome:meuNome, sobrenome, minhaIdade = 10} = pessoa;
 console.log(meuNome, sobrenome, minhaIdade);
 
-
+//desconstruindo um array
 let euMeAmarray = ['Algulstus Júunnyor', 'Algulstus', 'Júunnyor', '@gutym'];
 let [, arrNome, arrSobreNome, arrInsta, arrIdade=101] = euMeAmarray; //a desconstrução do array acontece na ordem que ele foi criado
 console.log(arrNome, arrSobreNome, arrInsta, arrIdade);
+
+//forma 1
+let somar = (x,y) => {
+
+    return x+ y;
+}
+
+//forma 2 - omitindo o return
+let somar2 = (x,y) => x + y;
+
+//forma 3 - com um unico parâmetro - omitindo o parentese e o return
+let letrasNome = nome => nome.length;
+
+console.log(somar2(1,20));
+console.log(letrasNome('Adalbertoilton'));
 
 
 
