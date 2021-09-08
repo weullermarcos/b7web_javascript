@@ -226,6 +226,40 @@ let letrasNome = nome => nome.length;
 console.log(somar2(1,20));
 console.log(letrasNome('Adalbertoilton'));
 
+let nuumeros = [1,2,3,4,5];
+let outrosNumeros = [...nuumeros, 6,7,8,9];
+
+console.log(outrosNumeros);
+
+let info = {
+    nome: 'Alberlandrio',
+    sobrenome: 'Ferradeira',
+    idade: 75,
+}
+
+let novaInfo = {
+    ...info,
+    cidade: 'Campina Grande',
+    uf: 'PB',
+    pais: 'Brasil'
+}
+
+console.log(novaInfo);
+
+//verifica se inclui determinado item
+console.log(lista.includes('item 2'));
+
+//repete o nome a quantidade de vezes informada
+console.log(nome.repeat(3));
+
+let telefone = '5';
+console.log(telefone.padEnd(9, '*')); //adiciona o caracter especificado ao FINAL da string até chegar ao tamanho solicitado
+console.log(telefone.padStart(9, '*')); //adiciona o caracter especificado ao INICIO da string até chegar ao tamanho solicitado
+
+
+
+
+
 
 
 
