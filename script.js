@@ -170,6 +170,35 @@ function rodar(){
     }, 2000);
 }
 
+async function enviar(){
+
+    let arquivo = document.getElementById('arquivo').files[0];
+
+    let body = new FormData();
+    body.append('title', 'titulo do arquivo');
+    body.append('body', arquivo);
+
+    let req = await fetch('https://sitedeuploadodoarquivo.com.br/upload',{
+        method: 'POST',
+        body: body,
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        }
+    });
+}
+
+function mostrarImagem(){
+
+    let imagem = document.getElementById('imagem').files[0];
+
+    let img = document.createElement('img');
+    img.src = URL.createObjectURL(imagem);
+    img.width = 200;
+
+    document.getElementById('areaImagem').appendChild(img);
+
+}
+
 function showTime(){
 
     let d = new Date();
