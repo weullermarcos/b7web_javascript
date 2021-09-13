@@ -1,21 +1,23 @@
 
-function carregarPosts(){
+async function carregarPosts(){
 
-    //montando uma requisição
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(function (resultado){
+    let req = await fetch('https://jsonplaceholder.typicode.com/posts');
+    let json = await req.json();
+    montarBlog(json);
+}
 
-            return resultado.json();
-        })
-        .then(function (json){
+function montarBlog(lista){
 
-            //exibe na div a quantidade dos posts
-            document.getElementById('posts').innerHTML = `${json.length} posts`;
-        })
-        .catch(function (error){
+    let html = ';';
 
-            console.log('deu problema');
-        });
+    for(let i in lista){
+
+        html += '<h3>' + lista[i].title + '</h3>';
+        html += lista[i].body + '<br/>';
+        html += lista[i].body + '<hr/>';
+    }
+
+    document.getElementById('posts').innerHTML = html;
 
 }
 
