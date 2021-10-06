@@ -1,4 +1,6 @@
 
+let modalQt = 1;
+
 //função para abreviar o uso do querySelector
 const c  = (elemento) => document.querySelector(elemento);
 const cs = (elemento) => document.querySelectorAll(elemento);
@@ -22,11 +24,29 @@ pizzaJson.map((item, index) => {
         //recuperando o id da pizza clicada
         let key = event.target.closest('.pizza-item').getAttribute('data-key');
 
-        //console.log(pizzaJson[key]);
+        modalQt = 1;
 
         c('.pizzaBig img').src = pizzaJson[key].img;
         c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;//preenchendo nome da pizza
         c('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
+        c('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].price.toFixed(2)}`;
+
+        //limpando o item selecionado
+        c('.pizzaInfo--size.selected').classList.remove('selected');
+
+        //preenchendo o tamanho das pizzas
+        cs('.pizzaInfo--size').forEach((size, sizeIndex) => {
+
+            //marcando a pizza grande como selecionada
+            if(sizeIndex == 2){
+
+                size.classList.add('selected');
+            }
+
+            size.querySelector('span').innerHTML = pizzaJson[key].sizes[sizeIndex];
+        });
+
+        c('.pizzaInfo--qt').innerHTML = modalQt;
 
         c('.pizzaWindowArea').style.opacity = 0;
         c('.pizzaWindowArea').style.display = 'flex';
@@ -36,4 +56,18 @@ pizzaJson.map((item, index) => {
 
     c('.pizza-area').append(pizzaItem);
 });
+
+//eventos do Modal
+function closeModal(){
+
+    c('.pizzaWindowArea').style.opacity = 0;
+
+    //criando um timer para fazer um efeito de desvanescer
+    setTimeout(()=>{
+        c('.pizzaWindowArea').style.display = 'none';
+    }, 500);
+
+
+
+}
 
